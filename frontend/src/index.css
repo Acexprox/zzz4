@@ -247,12 +247,12 @@ code {
 
 /* Typewriter RTL hero title — removed on user request */
 
-/* Glass Morphism Effect with Bright Neon Glow for Hero Title Badge */
+/* Glass Morphism Effect with Thin Neon Glow for Hero Title Badge */
 .glass-title-badge {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(25px) saturate(180%);
   -webkit-backdrop-filter: blur(25px) saturate(180%);
-  border: 2px solid rgba(0, 255, 255, 0.3);
+  border: 1px solid rgba(0, 255, 255, 0.2);
   box-shadow: 
     /* Glass depth shadow */
     0 8px 32px 0 rgba(31, 38, 135, 0.15),
@@ -261,16 +261,16 @@ code {
     inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
     /* Top glass edge reflection */
     0 1px 0 0 rgba(255, 255, 255, 0.2),
-    /* Bright Neon glow effect - Cyan/Electric Blue/Purple */
-    0 0 20px rgba(0, 255, 255, 0.6),
-    0 0 40px rgba(0, 255, 255, 0.4),
-    0 0 60px rgba(57, 255, 255, 0.3),
-    0 0 80px rgba(138, 43, 226, 0.2),
+    /* Thin Neon glow effect - Cyan/Electric Blue/Purple */
+    0 0 8px rgba(0, 255, 255, 0.4),
+    0 0 16px rgba(0, 255, 255, 0.2),
+    0 0 24px rgba(57, 255, 255, 0.15),
+    0 0 32px rgba(138, 43, 226, 0.1),
     /* Glass thickness shadow */
     0 20px 40px -12px rgba(0, 0, 0, 0.1),
-    /* Neon side edges for thickness */
-    inset 2px 0 0 0 rgba(0, 255, 255, 0.2),
-    inset -2px 0 0 0 rgba(0, 255, 255, 0.2);
+    /* Thin neon side edges */
+    inset 1px 0 0 0 rgba(0, 255, 255, 0.1),
+    inset -1px 0 0 0 rgba(0, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
@@ -290,40 +290,40 @@ code {
     inset 0 -1px 0 0 rgba(255, 255, 255, 0.15),
     /* Enhanced top reflection */
     0 1px 0 0 rgba(255, 255, 255, 0.3),
-    /* Intense neon glow on hover */
-    0 0 30px rgba(0, 255, 255, 0.8),
-    0 0 60px rgba(0, 255, 255, 0.6),
-    0 0 90px rgba(57, 255, 255, 0.4),
-    0 0 120px rgba(138, 43, 226, 0.3),
-    0 0 150px rgba(255, 20, 147, 0.2),
+    /* Enhanced thin neon glow on hover */
+    0 0 12px rgba(0, 255, 255, 0.6),
+    0 0 24px rgba(0, 255, 255, 0.3),
+    0 0 36px rgba(57, 255, 255, 0.2),
+    0 0 48px rgba(138, 43, 226, 0.15),
+    0 0 60px rgba(255, 20, 147, 0.1),
     /* Enhanced thickness shadow */
     0 25px 50px -12px rgba(0, 0, 0, 0.15),
-    /* Brighter neon side edges */
-    inset 2px 0 0 0 rgba(0, 255, 255, 0.3),
-    inset -2px 0 0 0 rgba(0, 255, 255, 0.3);
+    /* Slightly brighter thin neon side edges */
+    inset 1px 0 0 0 rgba(0, 255, 255, 0.15),
+    inset -1px 0 0 0 rgba(0, 255, 255, 0.15);
 }
 
-/* Top neon edge highlight */
+/* Thin top neon edge highlight */
 .glass-title-badge::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 1px;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(0, 255, 255, 0.4) 15%,
-    rgba(57, 255, 255, 0.8) 35%,
-    rgba(138, 43, 226, 0.6) 50%,
-    rgba(255, 20, 147, 0.8) 65%,
-    rgba(0, 255, 255, 0.4) 85%,
+    rgba(0, 255, 255, 0.3) 15%,
+    rgba(57, 255, 255, 0.6) 35%,
+    rgba(138, 43, 226, 0.4) 50%,
+    rgba(255, 20, 147, 0.6) 65%,
+    rgba(0, 255, 255, 0.3) 85%,
     transparent 100%);
-  opacity: 0.9;
+  opacity: 0.8;
   border-radius: 20px 20px 0 0;
 }
 
-/* Moving neon shine with rainbow effect */
+/* Moving thin neon shine with rainbow effect */
 .glass-title-badge::after {
   content: '';
   position: absolute;
@@ -333,12 +333,12 @@ code {
   height: 100%;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(0, 255, 255, 0.1) 10%,
-    rgba(57, 255, 255, 0.3) 25%,
-    rgba(138, 43, 226, 0.4) 40%,
-    rgba(255, 20, 147, 0.3) 60%,
-    rgba(0, 255, 255, 0.2) 75%,
-    rgba(57, 255, 255, 0.1) 90%,
+    rgba(0, 255, 255, 0.05) 10%,
+    rgba(57, 255, 255, 0.15) 25%,
+    rgba(138, 43, 226, 0.2) 40%,
+    rgba(255, 20, 147, 0.15) 60%,
+    rgba(0, 255, 255, 0.1) 75%,
+    rgba(57, 255, 255, 0.05) 90%,
     transparent 100%);
   animation: neon-rainbow-shine 5s ease-in-out infinite;
   pointer-events: none;
@@ -352,49 +352,49 @@ code {
   100% { left: 100%; opacity: 0; }
 }
 
-/* Enhanced text visibility with neon accent */
+/* Enhanced text visibility with subtle neon accent */
 .glass-title-badge {
   color: #ffffff !important;
   text-shadow: 
     /* White text glow for readability */
     0 1px 3px rgba(255, 255, 255, 0.9),
     0 2px 6px rgba(0, 0, 0, 0.3),
-    /* Bright neon text glow */
-    0 0 10px rgba(0, 255, 255, 0.8),
-    0 0 20px rgba(0, 255, 255, 0.6),
-    0 0 30px rgba(57, 255, 255, 0.4),
-    0 0 40px rgba(138, 43, 226, 0.3);
+    /* Subtle neon text glow */
+    0 0 6px rgba(0, 255, 255, 0.6),
+    0 0 12px rgba(0, 255, 255, 0.3),
+    0 0 18px rgba(57, 255, 255, 0.2),
+    0 0 24px rgba(138, 43, 226, 0.15);
 }
 
-/* 3D neon border effect */
+/* Thin 3D neon border effect */
 .glass-title-badge {
   border-image: linear-gradient(135deg, 
-    rgba(0, 255, 255, 0.6) 0%,
-    rgba(57, 255, 255, 0.4) 25%,
-    rgba(138, 43, 226, 0.3) 50%,
-    rgba(255, 20, 147, 0.4) 75%,
-    rgba(0, 255, 255, 0.6) 100%) 1;
+    rgba(0, 255, 255, 0.3) 0%,
+    rgba(57, 255, 255, 0.2) 25%,
+    rgba(138, 43, 226, 0.15) 50%,
+    rgba(255, 20, 147, 0.2) 75%,
+    rgba(0, 255, 255, 0.3) 100%) 1;
 }
 
-/* Pulsing neon rainbow effect */
+/* Subtle pulsing thin neon effect */
 .glass-title-badge {
-  animation: neon-pulse-rainbow 3s ease-in-out infinite;
+  animation: thin-neon-pulse-rainbow 3s ease-in-out infinite;
 }
 
-@keyframes neon-pulse-rainbow {
+@keyframes thin-neon-pulse-rainbow {
   0%, 100% { 
     box-shadow: 
       0 8px 32px 0 rgba(31, 38, 135, 0.15),
       inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
       inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
       0 1px 0 0 rgba(255, 255, 255, 0.2),
-      0 0 20px rgba(0, 255, 255, 0.6),
-      0 0 40px rgba(0, 255, 255, 0.4),
-      0 0 60px rgba(57, 255, 255, 0.3),
-      0 0 80px rgba(138, 43, 226, 0.2),
+      0 0 8px rgba(0, 255, 255, 0.4),
+      0 0 16px rgba(0, 255, 255, 0.2),
+      0 0 24px rgba(57, 255, 255, 0.15),
+      0 0 32px rgba(138, 43, 226, 0.1),
       0 20px 40px -12px rgba(0, 0, 0, 0.1),
-      inset 2px 0 0 0 rgba(0, 255, 255, 0.2),
-      inset -2px 0 0 0 rgba(0, 255, 255, 0.2);
+      inset 1px 0 0 0 rgba(0, 255, 255, 0.1),
+      inset -1px 0 0 0 rgba(0, 255, 255, 0.1);
   }
   33% { 
     box-shadow: 
@@ -402,13 +402,13 @@ code {
       inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
       inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
       0 1px 0 0 rgba(255, 255, 255, 0.2),
-      0 0 25px rgba(138, 43, 226, 0.7),
-      0 0 50px rgba(138, 43, 226, 0.5),
-      0 0 75px rgba(255, 20, 147, 0.4),
-      0 0 100px rgba(0, 255, 255, 0.2),
+      0 0 10px rgba(138, 43, 226, 0.5),
+      0 0 20px rgba(138, 43, 226, 0.25),
+      0 0 30px rgba(255, 20, 147, 0.2),
+      0 0 40px rgba(0, 255, 255, 0.1),
       0 20px 40px -12px rgba(0, 0, 0, 0.1),
-      inset 2px 0 0 0 rgba(138, 43, 226, 0.3),
-      inset -2px 0 0 0 rgba(138, 43, 226, 0.3);
+      inset 1px 0 0 0 rgba(138, 43, 226, 0.15),
+      inset -1px 0 0 0 rgba(138, 43, 226, 0.15);
   }
   66% { 
     box-shadow: 
@@ -416,13 +416,13 @@ code {
       inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
       inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
       0 1px 0 0 rgba(255, 255, 255, 0.2),
-      0 0 25px rgba(255, 20, 147, 0.7),
-      0 0 50px rgba(255, 20, 147, 0.5),
-      0 0 75px rgba(57, 255, 255, 0.4),
-      0 0 100px rgba(138, 43, 226, 0.2),
+      0 0 10px rgba(255, 20, 147, 0.5),
+      0 0 20px rgba(255, 20, 147, 0.25),
+      0 0 30px rgba(57, 255, 255, 0.2),
+      0 0 40px rgba(138, 43, 226, 0.1),
       0 20px 40px -12px rgba(0, 0, 0, 0.1),
-      inset 2px 0 0 0 rgba(255, 20, 147, 0.3),
-      inset -2px 0 0 0 rgba(255, 20, 147, 0.3);
+      inset 1px 0 0 0 rgba(255, 20, 147, 0.15),
+      inset -1px 0 0 0 rgba(255, 20, 147, 0.15);
   }
 }
 
