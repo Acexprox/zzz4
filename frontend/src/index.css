@@ -247,48 +247,79 @@ code {
 
 /* Typewriter RTL hero title — removed on user request */
 
-/* Glass Morphism Effect for Hero Title Badge */
+/* Glass Morphism Effect with Neon Glow for Hero Title Badge */
 .glass-title-badge {
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(25px) saturate(180%);
   -webkit-backdrop-filter: blur(25px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.25);
   box-shadow: 
+    /* Glass depth shadow */
     0 8px 32px 0 rgba(31, 38, 135, 0.15),
+    /* Inner glass highlight */
     inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
+    /* Top glass edge reflection */
     0 1px 0 0 rgba(255, 255, 255, 0.2),
-    0 20px 40px -12px rgba(0, 0, 0, 0.1);
+    /* Neon glow effect - soft yellow/orange */
+    0 0 20px rgba(214, 182, 97, 0.3),
+    0 0 40px rgba(214, 182, 97, 0.15),
+    0 0 60px rgba(232, 163, 23, 0.1),
+    /* Glass thickness shadow */
+    0 20px 40px -12px rgba(0, 0, 0, 0.1),
+    /* Side edges for thickness */
+    inset 2px 0 0 0 rgba(255, 255, 255, 0.1),
+    inset -2px 0 0 0 rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  /* Add 3D thickness effect */
+  transform: perspective(1000px) rotateX(2deg);
+  transform-style: preserve-3d;
 }
 
 .glass-title-badge:hover {
   background: rgba(255, 255, 255, 0.18);
-  transform: translateY(-3px) scale(1.02);
+  transform: perspective(1000px) rotateX(2deg) translateY(-3px) scale(1.02);
   box-shadow: 
+    /* Enhanced glass depth */
     0 15px 45px 0 rgba(31, 38, 135, 0.25),
+    /* Brighter inner highlights */
     inset 0 1px 0 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.15),
+    /* Enhanced top reflection */
     0 1px 0 0 rgba(255, 255, 255, 0.3),
-    0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    /* Stronger neon glow on hover */
+    0 0 25px rgba(214, 182, 97, 0.5),
+    0 0 50px rgba(214, 182, 97, 0.25),
+    0 0 75px rgba(232, 163, 23, 0.15),
+    0 0 100px rgba(255, 165, 0, 0.1),
+    /* Enhanced thickness shadow */
+    0 25px 50px -12px rgba(0, 0, 0, 0.15),
+    /* Brighter side edges */
+    inset 2px 0 0 0 rgba(255, 255, 255, 0.15),
+    inset -2px 0 0 0 rgba(255, 255, 255, 0.15);
 }
 
+/* Top glass edge highlight */
 .glass-title-badge::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 3px;
   background: linear-gradient(90deg, 
     transparent 0%, 
     rgba(255, 255, 255, 0.4) 25%,
-    rgba(255, 255, 255, 0.6) 50%, 
+    rgba(214, 182, 97, 0.6) 50%, 
     rgba(255, 255, 255, 0.4) 75%,
     transparent 100%);
-  opacity: 0.7;
+  opacity: 0.8;
+  border-radius: 20px 20px 0 0;
 }
 
+/* Moving glass shine with neon tint */
 .glass-title-badge::after {
   content: '';
   position: absolute;
@@ -299,37 +330,78 @@ code {
   background: linear-gradient(90deg, 
     transparent 0%, 
     rgba(255, 255, 255, 0.05) 20%,
-    rgba(255, 255, 255, 0.15) 40%,
-    rgba(255, 255, 255, 0.2) 50%,
-    rgba(255, 255, 255, 0.15) 60%,
+    rgba(214, 182, 97, 0.15) 40%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(232, 163, 23, 0.15) 60%,
     rgba(255, 255, 255, 0.05) 80%,
     transparent 100%);
-  animation: glass-shine 5s ease-in-out infinite;
+  animation: glass-neon-shine 6s ease-in-out infinite;
   pointer-events: none;
+  mix-blend-mode: overlay;
 }
 
-@keyframes glass-shine {
+@keyframes glass-neon-shine {
   0% { left: -100%; opacity: 0; }
   10% { opacity: 1; }
   90% { opacity: 1; }
   100% { left: 100%; opacity: 0; }
 }
 
-/* Enhanced text visibility on glass background */
+/* Enhanced text visibility with neon accent */
 .glass-title-badge {
   color: #1a1a1a !important;
   text-shadow: 
+    /* White text glow for readability */
     0 1px 3px rgba(255, 255, 255, 0.9),
     0 2px 6px rgba(0, 0, 0, 0.08),
-    0 0 20px rgba(255, 255, 255, 0.3);
+    /* Subtle neon text glow */
+    0 0 15px rgba(255, 255, 255, 0.4),
+    0 0 25px rgba(214, 182, 97, 0.2),
+    0 0 35px rgba(232, 163, 23, 0.1);
 }
 
-/* Additional frosted glass border effect */
+/* 3D glass border with neon accent */
 .glass-title-badge {
   border-image: linear-gradient(135deg, 
     rgba(255, 255, 255, 0.4) 0%,
-    rgba(255, 255, 255, 0.1) 50%,
+    rgba(214, 182, 97, 0.3) 25%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(232, 163, 23, 0.3) 75%,
     rgba(255, 255, 255, 0.4) 100%) 1;
+}
+
+/* Subtle pulsing neon effect */
+.glass-title-badge {
+  animation: subtle-neon-pulse 4s ease-in-out infinite;
+}
+
+@keyframes subtle-neon-pulse {
+  0%, 100% { 
+    box-shadow: 
+      0 8px 32px 0 rgba(31, 38, 135, 0.15),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+      inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
+      0 1px 0 0 rgba(255, 255, 255, 0.2),
+      0 0 20px rgba(214, 182, 97, 0.3),
+      0 0 40px rgba(214, 182, 97, 0.15),
+      0 0 60px rgba(232, 163, 23, 0.1),
+      0 20px 40px -12px rgba(0, 0, 0, 0.1),
+      inset 2px 0 0 0 rgba(255, 255, 255, 0.1),
+      inset -2px 0 0 0 rgba(255, 255, 255, 0.1);
+  }
+  50% { 
+    box-shadow: 
+      0 8px 32px 0 rgba(31, 38, 135, 0.15),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+      inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
+      0 1px 0 0 rgba(255, 255, 255, 0.2),
+      0 0 25px rgba(214, 182, 97, 0.4),
+      0 0 50px rgba(214, 182, 97, 0.2),
+      0 0 75px rgba(232, 163, 23, 0.15),
+      0 20px 40px -12px rgba(0, 0, 0, 0.1),
+      inset 2px 0 0 0 rgba(255, 255, 255, 0.1),
+      inset -2px 0 0 0 rgba(255, 255, 255, 0.1);
+  }
 }
 
 .tm-pulse-soft { animation: tm-pulse-soft 2.6s ease-in-out infinite; }
