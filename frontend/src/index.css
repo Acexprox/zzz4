@@ -249,26 +249,28 @@ code {
 
 /* Glass Morphism Effect for Hero Title Badge */
 .glass-title-badge {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 
-    0 8px 32px 0 rgba(31, 38, 135, 0.2),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.4),
-    0 1px 0 0 rgba(255, 255, 255, 0.2);
+    0 8px 32px 0 rgba(31, 38, 135, 0.15),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+    0 1px 0 0 rgba(255, 255, 255, 0.2),
+    0 20px 40px -12px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
 .glass-title-badge:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-3px) scale(1.02);
   box-shadow: 
-    0 12px 40px 0 rgba(31, 38, 135, 0.3),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.5),
-    0 1px 0 0 rgba(255, 255, 255, 0.3);
+    0 15px 45px 0 rgba(31, 38, 135, 0.25),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.4),
+    0 1px 0 0 rgba(255, 255, 255, 0.3),
+    0 25px 50px -12px rgba(0, 0, 0, 0.15);
 }
 
 .glass-title-badge::before {
@@ -277,11 +279,14 @@ code {
   top: 0;
   left: 0;
   right: 0;
-  height: 1px;
+  height: 2px;
   background: linear-gradient(90deg, 
     transparent 0%, 
+    rgba(255, 255, 255, 0.4) 25%,
     rgba(255, 255, 255, 0.6) 50%, 
+    rgba(255, 255, 255, 0.4) 75%,
     transparent 100%);
+  opacity: 0.7;
 }
 
 .glass-title-badge::after {
@@ -293,17 +298,20 @@ code {
   height: 100%;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(255, 255, 255, 0.1) 30%,
+    rgba(255, 255, 255, 0.05) 20%,
+    rgba(255, 255, 255, 0.15) 40%,
     rgba(255, 255, 255, 0.2) 50%,
-    rgba(255, 255, 255, 0.1) 70%,
+    rgba(255, 255, 255, 0.15) 60%,
+    rgba(255, 255, 255, 0.05) 80%,
     transparent 100%);
-  animation: glass-shine 4s ease-in-out infinite;
+  animation: glass-shine 5s ease-in-out infinite;
   pointer-events: none;
 }
 
 @keyframes glass-shine {
   0% { left: -100%; opacity: 0; }
-  50% { opacity: 1; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
   100% { left: 100%; opacity: 0; }
 }
 
@@ -311,8 +319,17 @@ code {
 .glass-title-badge {
   color: #1a1a1a !important;
   text-shadow: 
-    0 1px 2px rgba(255, 255, 255, 0.8),
-    0 2px 4px rgba(0, 0, 0, 0.1);
+    0 1px 3px rgba(255, 255, 255, 0.9),
+    0 2px 6px rgba(0, 0, 0, 0.08),
+    0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Additional frosted glass border effect */
+.glass-title-badge {
+  border-image: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.4) 100%) 1;
 }
 
 .tm-pulse-soft { animation: tm-pulse-soft 2.6s ease-in-out infinite; }
