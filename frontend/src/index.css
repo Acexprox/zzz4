@@ -247,12 +247,12 @@ code {
 
 /* Typewriter RTL hero title — removed on user request */
 
-/* Glass Morphism Effect with Neon Glow for Hero Title Badge */
+/* Glass Morphism Effect with Bright Neon Glow for Hero Title Badge */
 .glass-title-badge {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(25px) saturate(180%);
   -webkit-backdrop-filter: blur(25px) saturate(180%);
-  border: 2px solid rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(0, 255, 255, 0.3);
   box-shadow: 
     /* Glass depth shadow */
     0 8px 32px 0 rgba(31, 38, 135, 0.15),
@@ -261,15 +261,16 @@ code {
     inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
     /* Top glass edge reflection */
     0 1px 0 0 rgba(255, 255, 255, 0.2),
-    /* Neon glow effect - soft yellow/orange */
-    0 0 20px rgba(214, 182, 97, 0.3),
-    0 0 40px rgba(214, 182, 97, 0.15),
-    0 0 60px rgba(232, 163, 23, 0.1),
+    /* Bright Neon glow effect - Cyan/Electric Blue/Purple */
+    0 0 20px rgba(0, 255, 255, 0.6),
+    0 0 40px rgba(0, 255, 255, 0.4),
+    0 0 60px rgba(57, 255, 255, 0.3),
+    0 0 80px rgba(138, 43, 226, 0.2),
     /* Glass thickness shadow */
     0 20px 40px -12px rgba(0, 0, 0, 0.1),
-    /* Side edges for thickness */
-    inset 2px 0 0 0 rgba(255, 255, 255, 0.1),
-    inset -2px 0 0 0 rgba(255, 255, 255, 0.1);
+    /* Neon side edges for thickness */
+    inset 2px 0 0 0 rgba(0, 255, 255, 0.2),
+    inset -2px 0 0 0 rgba(0, 255, 255, 0.2);
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
@@ -279,8 +280,8 @@ code {
 }
 
 .glass-title-badge:hover {
-  background: rgba(255, 255, 255, 0.18);
-  transform: perspective(1000px) rotateX(2deg) translateY(-3px) scale(1.02);
+  background: rgba(255, 255, 255, 0.12);
+  transform: perspective(1000px) rotateX(2deg) translateY(-4px) scale(1.03);
   box-shadow: 
     /* Enhanced glass depth */
     0 15px 45px 0 rgba(31, 38, 135, 0.25),
@@ -289,19 +290,20 @@ code {
     inset 0 -1px 0 0 rgba(255, 255, 255, 0.15),
     /* Enhanced top reflection */
     0 1px 0 0 rgba(255, 255, 255, 0.3),
-    /* Stronger neon glow on hover */
-    0 0 25px rgba(214, 182, 97, 0.5),
-    0 0 50px rgba(214, 182, 97, 0.25),
-    0 0 75px rgba(232, 163, 23, 0.15),
-    0 0 100px rgba(255, 165, 0, 0.1),
+    /* Intense neon glow on hover */
+    0 0 30px rgba(0, 255, 255, 0.8),
+    0 0 60px rgba(0, 255, 255, 0.6),
+    0 0 90px rgba(57, 255, 255, 0.4),
+    0 0 120px rgba(138, 43, 226, 0.3),
+    0 0 150px rgba(255, 20, 147, 0.2),
     /* Enhanced thickness shadow */
     0 25px 50px -12px rgba(0, 0, 0, 0.15),
-    /* Brighter side edges */
-    inset 2px 0 0 0 rgba(255, 255, 255, 0.15),
-    inset -2px 0 0 0 rgba(255, 255, 255, 0.15);
+    /* Brighter neon side edges */
+    inset 2px 0 0 0 rgba(0, 255, 255, 0.3),
+    inset -2px 0 0 0 rgba(0, 255, 255, 0.3);
 }
 
-/* Top glass edge highlight */
+/* Top neon edge highlight */
 .glass-title-badge::before {
   content: '';
   position: absolute;
@@ -311,15 +313,17 @@ code {
   height: 3px;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(255, 255, 255, 0.4) 25%,
-    rgba(214, 182, 97, 0.6) 50%, 
-    rgba(255, 255, 255, 0.4) 75%,
+    rgba(0, 255, 255, 0.4) 15%,
+    rgba(57, 255, 255, 0.8) 35%,
+    rgba(138, 43, 226, 0.6) 50%,
+    rgba(255, 20, 147, 0.8) 65%,
+    rgba(0, 255, 255, 0.4) 85%,
     transparent 100%);
-  opacity: 0.8;
+  opacity: 0.9;
   border-radius: 20px 20px 0 0;
 }
 
-/* Moving glass shine with neon tint */
+/* Moving neon shine with rainbow effect */
 .glass-title-badge::after {
   content: '';
   position: absolute;
@@ -329,18 +333,19 @@ code {
   height: 100%;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(255, 255, 255, 0.05) 20%,
-    rgba(214, 182, 97, 0.15) 40%,
-    rgba(255, 255, 255, 0.25) 50%,
-    rgba(232, 163, 23, 0.15) 60%,
-    rgba(255, 255, 255, 0.05) 80%,
+    rgba(0, 255, 255, 0.1) 10%,
+    rgba(57, 255, 255, 0.3) 25%,
+    rgba(138, 43, 226, 0.4) 40%,
+    rgba(255, 20, 147, 0.3) 60%,
+    rgba(0, 255, 255, 0.2) 75%,
+    rgba(57, 255, 255, 0.1) 90%,
     transparent 100%);
-  animation: glass-neon-shine 6s ease-in-out infinite;
+  animation: neon-rainbow-shine 5s ease-in-out infinite;
   pointer-events: none;
-  mix-blend-mode: overlay;
+  mix-blend-mode: screen;
 }
 
-@keyframes glass-neon-shine {
+@keyframes neon-rainbow-shine {
   0% { left: -100%; opacity: 0; }
   10% { opacity: 1; }
   90% { opacity: 1; }
@@ -349,58 +354,75 @@ code {
 
 /* Enhanced text visibility with neon accent */
 .glass-title-badge {
-  color: #1a1a1a !important;
+  color: #ffffff !important;
   text-shadow: 
     /* White text glow for readability */
     0 1px 3px rgba(255, 255, 255, 0.9),
-    0 2px 6px rgba(0, 0, 0, 0.08),
-    /* Subtle neon text glow */
-    0 0 15px rgba(255, 255, 255, 0.4),
-    0 0 25px rgba(214, 182, 97, 0.2),
-    0 0 35px rgba(232, 163, 23, 0.1);
+    0 2px 6px rgba(0, 0, 0, 0.3),
+    /* Bright neon text glow */
+    0 0 10px rgba(0, 255, 255, 0.8),
+    0 0 20px rgba(0, 255, 255, 0.6),
+    0 0 30px rgba(57, 255, 255, 0.4),
+    0 0 40px rgba(138, 43, 226, 0.3);
 }
 
-/* 3D glass border with neon accent */
+/* 3D neon border effect */
 .glass-title-badge {
   border-image: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.4) 0%,
-    rgba(214, 182, 97, 0.3) 25%,
-    rgba(255, 255, 255, 0.2) 50%,
-    rgba(232, 163, 23, 0.3) 75%,
-    rgba(255, 255, 255, 0.4) 100%) 1;
+    rgba(0, 255, 255, 0.6) 0%,
+    rgba(57, 255, 255, 0.4) 25%,
+    rgba(138, 43, 226, 0.3) 50%,
+    rgba(255, 20, 147, 0.4) 75%,
+    rgba(0, 255, 255, 0.6) 100%) 1;
 }
 
-/* Subtle pulsing neon effect */
+/* Pulsing neon rainbow effect */
 .glass-title-badge {
-  animation: subtle-neon-pulse 4s ease-in-out infinite;
+  animation: neon-pulse-rainbow 3s ease-in-out infinite;
 }
 
-@keyframes subtle-neon-pulse {
+@keyframes neon-pulse-rainbow {
   0%, 100% { 
     box-shadow: 
       0 8px 32px 0 rgba(31, 38, 135, 0.15),
       inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
       inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
       0 1px 0 0 rgba(255, 255, 255, 0.2),
-      0 0 20px rgba(214, 182, 97, 0.3),
-      0 0 40px rgba(214, 182, 97, 0.15),
-      0 0 60px rgba(232, 163, 23, 0.1),
+      0 0 20px rgba(0, 255, 255, 0.6),
+      0 0 40px rgba(0, 255, 255, 0.4),
+      0 0 60px rgba(57, 255, 255, 0.3),
+      0 0 80px rgba(138, 43, 226, 0.2),
       0 20px 40px -12px rgba(0, 0, 0, 0.1),
-      inset 2px 0 0 0 rgba(255, 255, 255, 0.1),
-      inset -2px 0 0 0 rgba(255, 255, 255, 0.1);
+      inset 2px 0 0 0 rgba(0, 255, 255, 0.2),
+      inset -2px 0 0 0 rgba(0, 255, 255, 0.2);
   }
-  50% { 
+  33% { 
     box-shadow: 
       0 8px 32px 0 rgba(31, 38, 135, 0.15),
       inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
       inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
       0 1px 0 0 rgba(255, 255, 255, 0.2),
-      0 0 25px rgba(214, 182, 97, 0.4),
-      0 0 50px rgba(214, 182, 97, 0.2),
-      0 0 75px rgba(232, 163, 23, 0.15),
+      0 0 25px rgba(138, 43, 226, 0.7),
+      0 0 50px rgba(138, 43, 226, 0.5),
+      0 0 75px rgba(255, 20, 147, 0.4),
+      0 0 100px rgba(0, 255, 255, 0.2),
       0 20px 40px -12px rgba(0, 0, 0, 0.1),
-      inset 2px 0 0 0 rgba(255, 255, 255, 0.1),
-      inset -2px 0 0 0 rgba(255, 255, 255, 0.1);
+      inset 2px 0 0 0 rgba(138, 43, 226, 0.3),
+      inset -2px 0 0 0 rgba(138, 43, 226, 0.3);
+  }
+  66% { 
+    box-shadow: 
+      0 8px 32px 0 rgba(31, 38, 135, 0.15),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+      inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
+      0 1px 0 0 rgba(255, 255, 255, 0.2),
+      0 0 25px rgba(255, 20, 147, 0.7),
+      0 0 50px rgba(255, 20, 147, 0.5),
+      0 0 75px rgba(57, 255, 255, 0.4),
+      0 0 100px rgba(138, 43, 226, 0.2),
+      0 20px 40px -12px rgba(0, 0, 0, 0.1),
+      inset 2px 0 0 0 rgba(255, 20, 147, 0.3),
+      inset -2px 0 0 0 rgba(255, 20, 147, 0.3);
   }
 }
 
