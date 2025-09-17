@@ -247,7 +247,7 @@ code {
 
 /* Typewriter RTL hero title — removed on user request */
 
-/* Glass Morphism Effect with Subtle Neon Glow for Hero Title Badge */
+/* Glass Morphism Effect with Contained Neon Glow for Hero Title Badge */
 .glass-title-badge {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(25px) saturate(180%);
@@ -261,7 +261,7 @@ code {
     inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
     /* Top glass edge reflection */
     0 1px 0 0 rgba(255, 255, 255, 0.2),
-    /* Subtle Neon glow effect - Cyan/Electric Blue/Purple */
+    /* Contained Neon glow effect - Cyan/Electric Blue/Purple */
     0 0 8px rgba(0, 255, 255, 0.3),
     0 0 16px rgba(0, 255, 255, 0.15),
     0 0 24px rgba(57, 255, 255, 0.1),
@@ -272,11 +272,13 @@ code {
     inset 1px 0 0 0 rgba(0, 255, 255, 0.08),
     inset -1px 0 0 0 rgba(0, 255, 255, 0.08);
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Prevent glow from bleeding outside */
   transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
   /* Add 3D thickness effect */
   transform: perspective(1000px) rotateX(2deg);
   transform-style: preserve-3d;
+  /* Ensure glow stays within bounds */
+  clip-path: inset(0 round 20px);
 }
 
 .glass-title-badge:hover {
@@ -290,7 +292,7 @@ code {
     inset 0 -1px 0 0 rgba(255, 255, 255, 0.15),
     /* Enhanced top reflection */
     0 1px 0 0 rgba(255, 255, 255, 0.3),
-    /* Enhanced subtle neon glow on hover */
+    /* Enhanced contained neon glow on hover */
     0 0 12px rgba(0, 255, 255, 0.45),
     0 0 24px rgba(0, 255, 255, 0.25),
     0 0 36px rgba(57, 255, 255, 0.15),
@@ -298,9 +300,48 @@ code {
     0 0 60px rgba(255, 20, 147, 0.08),
     /* Enhanced thickness shadow */
     0 25px 50px -12px rgba(0, 0, 0, 0.15),
-    /* Slightly brighter subtle neon side edges */
+    /* Slightly brighter contained neon side edges */
     inset 1px 0 0 0 rgba(0, 255, 255, 0.12),
     inset -1px 0 0 0 rgba(0, 255, 255, 0.12);
+}
+
+/* Mobile-specific glow containment */
+@media (max-width: 640px) {
+  .glass-title-badge {
+    /* Reduce glow spread on mobile to prevent bleeding */
+    box-shadow: 
+      0 8px 32px 0 rgba(31, 38, 135, 0.15),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+      inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
+      0 1px 0 0 rgba(255, 255, 255, 0.2),
+      /* Tighter mobile glow */
+      0 0 6px rgba(0, 255, 255, 0.25),
+      0 0 12px rgba(0, 255, 255, 0.12),
+      0 0 18px rgba(57, 255, 255, 0.08),
+      0 0 24px rgba(138, 43, 226, 0.06),
+      0 20px 40px -12px rgba(0, 0, 0, 0.1),
+      inset 1px 0 0 0 rgba(0, 255, 255, 0.06),
+      inset -1px 0 0 0 rgba(0, 255, 255, 0.06);
+    /* Stronger containment on mobile */
+    clip-path: inset(0 round 16px);
+  }
+  
+  .glass-title-badge:hover {
+    box-shadow: 
+      0 15px 45px 0 rgba(31, 38, 135, 0.25),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.4),
+      inset 0 -1px 0 0 rgba(255, 255, 255, 0.15),
+      0 1px 0 0 rgba(255, 255, 255, 0.3),
+      /* Tighter mobile hover glow */
+      0 0 8px rgba(0, 255, 255, 0.35),
+      0 0 16px rgba(0, 255, 255, 0.2),
+      0 0 24px rgba(57, 255, 255, 0.12),
+      0 0 32px rgba(138, 43, 226, 0.08),
+      0 0 40px rgba(255, 20, 147, 0.06),
+      0 25px 50px -12px rgba(0, 0, 0, 0.15),
+      inset 1px 0 0 0 rgba(0, 255, 255, 0.1),
+      inset -1px 0 0 0 rgba(0, 255, 255, 0.1);
+  }
 }
 
 /* Subtle top neon edge highlight */
@@ -376,12 +417,12 @@ code {
     rgba(0, 255, 255, 0.25) 100%) 1;
 }
 
-/* Gentle pulsing subtle neon effect */
+/* Gentle pulsing contained neon effect */
 .glass-title-badge {
-  animation: gentle-neon-pulse-rainbow 3s ease-in-out infinite;
+  animation: contained-neon-pulse-rainbow 3s ease-in-out infinite;
 }
 
-@keyframes gentle-neon-pulse-rainbow {
+@keyframes contained-neon-pulse-rainbow {
   0%, 100% { 
     box-shadow: 
       0 8px 32px 0 rgba(31, 38, 135, 0.15),
@@ -423,6 +464,54 @@ code {
       0 20px 40px -12px rgba(0, 0, 0, 0.1),
       inset 1px 0 0 0 rgba(255, 20, 147, 0.12),
       inset -1px 0 0 0 rgba(255, 20, 147, 0.12);
+  }
+}
+
+/* Mobile-specific contained pulse animation */
+@media (max-width: 640px) {
+  @keyframes contained-neon-pulse-rainbow {
+    0%, 100% { 
+      box-shadow: 
+        0 8px 32px 0 rgba(31, 38, 135, 0.15),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+        inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
+        0 1px 0 0 rgba(255, 255, 255, 0.2),
+        0 0 6px rgba(0, 255, 255, 0.25),
+        0 0 12px rgba(0, 255, 255, 0.12),
+        0 0 18px rgba(57, 255, 255, 0.08),
+        0 0 24px rgba(138, 43, 226, 0.06),
+        0 20px 40px -12px rgba(0, 0, 0, 0.1),
+        inset 1px 0 0 0 rgba(0, 255, 255, 0.06),
+        inset -1px 0 0 0 rgba(0, 255, 255, 0.06);
+    }
+    33% { 
+      box-shadow: 
+        0 8px 32px 0 rgba(31, 38, 135, 0.15),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+        inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
+        0 1px 0 0 rgba(255, 255, 255, 0.2),
+        0 0 8px rgba(138, 43, 226, 0.3),
+        0 0 16px rgba(138, 43, 226, 0.15),
+        0 0 24px rgba(255, 20, 147, 0.12),
+        0 0 32px rgba(0, 255, 255, 0.06),
+        0 20px 40px -12px rgba(0, 0, 0, 0.1),
+        inset 1px 0 0 0 rgba(138, 43, 226, 0.1),
+        inset -1px 0 0 0 rgba(138, 43, 226, 0.1);
+    }
+    66% { 
+      box-shadow: 
+        0 8px 32px 0 rgba(31, 38, 135, 0.15),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+        inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
+        0 1px 0 0 rgba(255, 255, 255, 0.2),
+        0 0 8px rgba(255, 20, 147, 0.3),
+        0 0 16px rgba(255, 20, 147, 0.15),
+        0 0 24px rgba(57, 255, 255, 0.12),
+        0 0 32px rgba(138, 43, 226, 0.06),
+        0 20px 40px -12px rgba(0, 0, 0, 0.1),
+        inset 1px 0 0 0 rgba(255, 20, 147, 0.1),
+        inset -1px 0 0 0 rgba(255, 20, 147, 0.1);
+    }
   }
 }
 
