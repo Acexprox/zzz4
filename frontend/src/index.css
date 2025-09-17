@@ -247,12 +247,12 @@ code {
 
 /* Typewriter RTL hero title — removed on user request */
 
-/* Glass Morphism Effect with Thin Neon Glow for Hero Title Badge */
+/* Glass Morphism Effect with Subtle Neon Glow for Hero Title Badge */
 .glass-title-badge {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(25px) saturate(180%);
   -webkit-backdrop-filter: blur(25px) saturate(180%);
-  border: 1px solid rgba(0, 255, 255, 0.2);
+  border: 1px solid rgba(0, 255, 255, 0.15);
   box-shadow: 
     /* Glass depth shadow */
     0 8px 32px 0 rgba(31, 38, 135, 0.15),
@@ -261,16 +261,16 @@ code {
     inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
     /* Top glass edge reflection */
     0 1px 0 0 rgba(255, 255, 255, 0.2),
-    /* Thin Neon glow effect - Cyan/Electric Blue/Purple */
-    0 0 8px rgba(0, 255, 255, 0.4),
-    0 0 16px rgba(0, 255, 255, 0.2),
-    0 0 24px rgba(57, 255, 255, 0.15),
-    0 0 32px rgba(138, 43, 226, 0.1),
+    /* Subtle Neon glow effect - Cyan/Electric Blue/Purple */
+    0 0 8px rgba(0, 255, 255, 0.3),
+    0 0 16px rgba(0, 255, 255, 0.15),
+    0 0 24px rgba(57, 255, 255, 0.1),
+    0 0 32px rgba(138, 43, 226, 0.08),
     /* Glass thickness shadow */
     0 20px 40px -12px rgba(0, 0, 0, 0.1),
-    /* Thin neon side edges */
-    inset 1px 0 0 0 rgba(0, 255, 255, 0.1),
-    inset -1px 0 0 0 rgba(0, 255, 255, 0.1);
+    /* Subtle neon side edges */
+    inset 1px 0 0 0 rgba(0, 255, 255, 0.08),
+    inset -1px 0 0 0 rgba(0, 255, 255, 0.08);
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
@@ -290,20 +290,20 @@ code {
     inset 0 -1px 0 0 rgba(255, 255, 255, 0.15),
     /* Enhanced top reflection */
     0 1px 0 0 rgba(255, 255, 255, 0.3),
-    /* Enhanced thin neon glow on hover */
-    0 0 12px rgba(0, 255, 255, 0.6),
-    0 0 24px rgba(0, 255, 255, 0.3),
-    0 0 36px rgba(57, 255, 255, 0.2),
-    0 0 48px rgba(138, 43, 226, 0.15),
-    0 0 60px rgba(255, 20, 147, 0.1),
+    /* Enhanced subtle neon glow on hover */
+    0 0 12px rgba(0, 255, 255, 0.45),
+    0 0 24px rgba(0, 255, 255, 0.25),
+    0 0 36px rgba(57, 255, 255, 0.15),
+    0 0 48px rgba(138, 43, 226, 0.12),
+    0 0 60px rgba(255, 20, 147, 0.08),
     /* Enhanced thickness shadow */
     0 25px 50px -12px rgba(0, 0, 0, 0.15),
-    /* Slightly brighter thin neon side edges */
-    inset 1px 0 0 0 rgba(0, 255, 255, 0.15),
-    inset -1px 0 0 0 rgba(0, 255, 255, 0.15);
+    /* Slightly brighter subtle neon side edges */
+    inset 1px 0 0 0 rgba(0, 255, 255, 0.12),
+    inset -1px 0 0 0 rgba(0, 255, 255, 0.12);
 }
 
-/* Thin top neon edge highlight */
+/* Subtle top neon edge highlight */
 .glass-title-badge::before {
   content: '';
   position: absolute;
@@ -313,17 +313,17 @@ code {
   height: 1px;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(0, 255, 255, 0.3) 15%,
-    rgba(57, 255, 255, 0.6) 35%,
-    rgba(138, 43, 226, 0.4) 50%,
-    rgba(255, 20, 147, 0.6) 65%,
-    rgba(0, 255, 255, 0.3) 85%,
+    rgba(0, 255, 255, 0.25) 15%,
+    rgba(57, 255, 255, 0.45) 35%,
+    rgba(138, 43, 226, 0.3) 50%,
+    rgba(255, 20, 147, 0.45) 65%,
+    rgba(0, 255, 255, 0.25) 85%,
     transparent 100%);
-  opacity: 0.8;
+  opacity: 0.7;
   border-radius: 20px 20px 0 0;
 }
 
-/* Moving thin neon shine with rainbow effect */
+/* Moving subtle neon shine with rainbow effect */
 .glass-title-badge::after {
   content: '';
   position: absolute;
@@ -333,12 +333,12 @@ code {
   height: 100%;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(0, 255, 255, 0.05) 10%,
-    rgba(57, 255, 255, 0.15) 25%,
-    rgba(138, 43, 226, 0.2) 40%,
-    rgba(255, 20, 147, 0.15) 60%,
-    rgba(0, 255, 255, 0.1) 75%,
-    rgba(57, 255, 255, 0.05) 90%,
+    rgba(0, 255, 255, 0.04) 10%,
+    rgba(57, 255, 255, 0.12) 25%,
+    rgba(138, 43, 226, 0.15) 40%,
+    rgba(255, 20, 147, 0.12) 60%,
+    rgba(0, 255, 255, 0.08) 75%,
+    rgba(57, 255, 255, 0.04) 90%,
     transparent 100%);
   animation: neon-rainbow-shine 5s ease-in-out infinite;
   pointer-events: none;
@@ -352,49 +352,49 @@ code {
   100% { left: 100%; opacity: 0; }
 }
 
-/* Enhanced text visibility with subtle neon accent */
+/* Enhanced text visibility with gentle neon accent */
 .glass-title-badge {
   color: #ffffff !important;
   text-shadow: 
     /* White text glow for readability */
     0 1px 3px rgba(255, 255, 255, 0.9),
     0 2px 6px rgba(0, 0, 0, 0.3),
-    /* Subtle neon text glow */
-    0 0 6px rgba(0, 255, 255, 0.6),
-    0 0 12px rgba(0, 255, 255, 0.3),
-    0 0 18px rgba(57, 255, 255, 0.2),
-    0 0 24px rgba(138, 43, 226, 0.15);
+    /* Gentle neon text glow */
+    0 0 6px rgba(0, 255, 255, 0.45),
+    0 0 12px rgba(0, 255, 255, 0.25),
+    0 0 18px rgba(57, 255, 255, 0.15),
+    0 0 24px rgba(138, 43, 226, 0.12);
 }
 
-/* Thin 3D neon border effect */
+/* Subtle 3D neon border effect */
 .glass-title-badge {
   border-image: linear-gradient(135deg, 
-    rgba(0, 255, 255, 0.3) 0%,
-    rgba(57, 255, 255, 0.2) 25%,
-    rgba(138, 43, 226, 0.15) 50%,
-    rgba(255, 20, 147, 0.2) 75%,
-    rgba(0, 255, 255, 0.3) 100%) 1;
+    rgba(0, 255, 255, 0.25) 0%,
+    rgba(57, 255, 255, 0.15) 25%,
+    rgba(138, 43, 226, 0.12) 50%,
+    rgba(255, 20, 147, 0.15) 75%,
+    rgba(0, 255, 255, 0.25) 100%) 1;
 }
 
-/* Subtle pulsing thin neon effect */
+/* Gentle pulsing subtle neon effect */
 .glass-title-badge {
-  animation: thin-neon-pulse-rainbow 3s ease-in-out infinite;
+  animation: gentle-neon-pulse-rainbow 3s ease-in-out infinite;
 }
 
-@keyframes thin-neon-pulse-rainbow {
+@keyframes gentle-neon-pulse-rainbow {
   0%, 100% { 
     box-shadow: 
       0 8px 32px 0 rgba(31, 38, 135, 0.15),
       inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
       inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
       0 1px 0 0 rgba(255, 255, 255, 0.2),
-      0 0 8px rgba(0, 255, 255, 0.4),
-      0 0 16px rgba(0, 255, 255, 0.2),
-      0 0 24px rgba(57, 255, 255, 0.15),
-      0 0 32px rgba(138, 43, 226, 0.1),
+      0 0 8px rgba(0, 255, 255, 0.3),
+      0 0 16px rgba(0, 255, 255, 0.15),
+      0 0 24px rgba(57, 255, 255, 0.1),
+      0 0 32px rgba(138, 43, 226, 0.08),
       0 20px 40px -12px rgba(0, 0, 0, 0.1),
-      inset 1px 0 0 0 rgba(0, 255, 255, 0.1),
-      inset -1px 0 0 0 rgba(0, 255, 255, 0.1);
+      inset 1px 0 0 0 rgba(0, 255, 255, 0.08),
+      inset -1px 0 0 0 rgba(0, 255, 255, 0.08);
   }
   33% { 
     box-shadow: 
@@ -402,13 +402,13 @@ code {
       inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
       inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
       0 1px 0 0 rgba(255, 255, 255, 0.2),
-      0 0 10px rgba(138, 43, 226, 0.5),
-      0 0 20px rgba(138, 43, 226, 0.25),
-      0 0 30px rgba(255, 20, 147, 0.2),
-      0 0 40px rgba(0, 255, 255, 0.1),
+      0 0 10px rgba(138, 43, 226, 0.35),
+      0 0 20px rgba(138, 43, 226, 0.2),
+      0 0 30px rgba(255, 20, 147, 0.15),
+      0 0 40px rgba(0, 255, 255, 0.08),
       0 20px 40px -12px rgba(0, 0, 0, 0.1),
-      inset 1px 0 0 0 rgba(138, 43, 226, 0.15),
-      inset -1px 0 0 0 rgba(138, 43, 226, 0.15);
+      inset 1px 0 0 0 rgba(138, 43, 226, 0.12),
+      inset -1px 0 0 0 rgba(138, 43, 226, 0.12);
   }
   66% { 
     box-shadow: 
@@ -416,13 +416,13 @@ code {
       inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
       inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
       0 1px 0 0 rgba(255, 255, 255, 0.2),
-      0 0 10px rgba(255, 20, 147, 0.5),
-      0 0 20px rgba(255, 20, 147, 0.25),
-      0 0 30px rgba(57, 255, 255, 0.2),
-      0 0 40px rgba(138, 43, 226, 0.1),
+      0 0 10px rgba(255, 20, 147, 0.35),
+      0 0 20px rgba(255, 20, 147, 0.2),
+      0 0 30px rgba(57, 255, 255, 0.15),
+      0 0 40px rgba(138, 43, 226, 0.08),
       0 20px 40px -12px rgba(0, 0, 0, 0.1),
-      inset 1px 0 0 0 rgba(255, 20, 147, 0.15),
-      inset -1px 0 0 0 rgba(255, 20, 147, 0.15);
+      inset 1px 0 0 0 rgba(255, 20, 147, 0.12),
+      inset -1px 0 0 0 rgba(255, 20, 147, 0.12);
   }
 }
 
